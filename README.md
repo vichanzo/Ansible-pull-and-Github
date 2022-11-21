@@ -33,3 +33,27 @@ git add test-commit.txt
 git commit -m "first commit"
 git push origin main
 ```
+
+## create Ansible Playbook
+Edit a file called local.yml
+```
+nano local.yml
+```
+```
+- hosts: localhost
+  connection: local
+  become: true
+  
+  tasks:
+  - name: Install htop
+    dnf:
+      name: htop
+```
+
+```
+git status
+git add local.yml
+git commit -m "initial commit of local.yml - install htop"
+git push origin main
+```
+
