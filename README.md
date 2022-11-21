@@ -16,10 +16,6 @@ Now clone this respository to your system:
 cd ~
 git clone git@github.com:vichanzo/Ansible-pull-and-Github.git
 ```
-or
-```
-git clone https://github.com/vichanzo/Ansible-pull-and-Github.git
-```
 
 If needed configure your name and e-mail (esc + :wq to save the file).
 ```
@@ -34,7 +30,7 @@ git commit -m "first commit"
 git push origin main
 ```
 
-## create Ansible Playbook
+## Create Ansible playbook
 Edit a file called local.yml
 ```
 nano local.yml
@@ -55,5 +51,12 @@ git status
 git add local.yml
 git commit -m "initial commit of local.yml - install htop"
 git push origin main
+```
+
+## Running ansible-pull
+On a different system you can run the local.yml playbook
+
+```
+sudo ansible-pull -U https://github.com/vichanzo/Ansible-pull-and-Github.git
 ```
 
