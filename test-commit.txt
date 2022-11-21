@@ -1,0 +1,6 @@
+This is a test file just to test out git commit
+
+git status
+git add test-commit.txt
+git commit -m "first commit"
+git push origin master
