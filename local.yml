@@ -4,5 +4,6 @@
   
   tasks:
   - name: Install htop
-    dnf:
+    yum:
       name: htop
+      state: present 
