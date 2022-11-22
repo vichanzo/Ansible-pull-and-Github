@@ -11,8 +11,8 @@
      yum:
       name: curl
       state: present  
-    - name: dnf install oracle-epel-release-el8
-      dnf: 
+    - name: yum install oracle-epel-release-el8
+      yum: 
        name: oracle-epel-release-el8
        state: present
     - name: yum install htop
