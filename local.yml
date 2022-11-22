@@ -11,11 +11,11 @@
      yum:
       name: curl
       state: present  
-    - name: yum install oracle-epel-release-el8
-      yum: 
-       name: oracle-epel-release-el8
-       state: present
-    - name: yum install htop
-      yum: 
-       name: htop
-       state: present
+   - name: yum install oracle-epel-release-el8
+     yum: 
+      name: oracle-epel-release-el8
+      state: present
+   - name: yum install htop
+     yum: 
+      name: htop
+      state: present
