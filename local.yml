@@ -3,7 +3,19 @@
   become: true
   
   tasks:
-  - name: Install htop
-    yum:
+   - name: yum install wget
+     yum:
+      name: wget
+      state: present
+   - name: yum install curl
+     yum:
+      name: curl
+      state: present  
+   - name: yum install opel-release
+     yum:
+      name: https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+      state: present
+   - name: yum install htop
+     yum:
       name: htop
-      state: present 
+      state: present
