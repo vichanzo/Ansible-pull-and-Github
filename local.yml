@@ -11,10 +11,6 @@
      yum:
       name: curl
       state: present  
-#   - name: yum install opel-release
-#     yum:
-#      name: https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
-#      state: present
     - name: dnf install oracle-epel-release-el8
       dnf: 
        name: oracle-epel-release-el8
