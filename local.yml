@@ -17,8 +17,8 @@
       state: present
    - name: copy oracle-epel-repos
      copy: 
-       src: files/
-       dest: /etc/
+       src: files/oracle-epel-ol8.repo
+       dest: /etc/yum.repos.d/oracle-epel-ol8.repo
        owner: root
        group: root
        mode: 0660
