@@ -26,3 +26,5 @@
      yum: 
       name: htop
       state: present
+   - include: users.yml
+   - include: cron.yml
