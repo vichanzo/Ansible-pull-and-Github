@@ -15,6 +15,13 @@
      yum: 
       name: oracle-epel-release-el8
       state: present
+   - name: copy oracle-epel-repos
+     copy: 
+       src: files/
+       dest: /etc/
+       owner: root
+       group: root
+       mode: 0660
    - name: yum install htop
      yum: 
       name: htop
