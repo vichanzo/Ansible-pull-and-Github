@@ -1,10 +1,11 @@
 
 tasks:
  - name: "Installing Docker Prerequisite packages"
-    yum:
-    name: "{{ item }}"
-    state: latest
-    with_items:
+   yum:
+   name: "{{ prereqs }}"
+   state: latest
+   vars:
+    prereqs:
      - yum-utils
      - device-mapper-persistent-data
      - lvm2
