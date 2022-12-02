@@ -27,4 +27,5 @@
       name: htop
       state: present
    - include: users.yml
+   - include: docker.yml
    - include: cron.yml
