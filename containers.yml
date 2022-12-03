@@ -16,3 +16,23 @@
     volumes:
      - '/home/opc/data/yt:/downloads'
     image: alexta69/metube
+
+- name: run docker linuxserver/swag
+  docker_container:
+   name: swag
+   ports:
+     - 80:80
+     - 443:443  
+#   cap_add:
+#     - NET_ADMIN
+   env:
+    PUID: "1000"
+    PGID: "1000"
+    TZ: "America/Los_Angeles"
+    URL: "vichanzo.duckdns.org"
+    VALIDATION: "http"
+    DUCKDNSTOKEN: "8944119b-c71b-4a0d-a12c-33c271e71c35" 
+   volumes:
+     - '/home/opc/swag:/config' 
+   restart_policy: unless-stopped
+   image: linuxserver/swag
