@@ -36,3 +36,17 @@
      - '/home/opc/swag:/config' 
    restart_policy: unless-stopped
    image: linuxserver/swag
+
+- name: Install Portainer
+  docker_container:
+   name: portainer
+   ports:
+    - 8000:8000
+    - 9000:9000
+    - 9443:9443
+   restart_policy: always
+   volumes:
+    - '/etc/localtime:/etc/localtime:ro'
+    - '/var/run/docker.sock:/var/run/docker.sock:ro'
+    - '/home/opc/portainer-data:/data'
+   image: portainer/portainer-ce:2.11.0
