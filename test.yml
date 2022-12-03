@@ -1,5 +1,9 @@
 ---
 - hosts: localhost
   connection: local
+  become: true
+
   tasks:
-    - include docker.yml
+#    - include: docker.yml
+#    - include: packages.yml
+    - include: containers.yml
