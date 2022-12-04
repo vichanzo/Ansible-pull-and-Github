@@ -1,0 +1,8 @@
+---
+- name: create local network
+  hosts: localhost
+  connection: local
+  tasks: 
+  - name: Create a network
+    docker_network:
+      name: swag_net
